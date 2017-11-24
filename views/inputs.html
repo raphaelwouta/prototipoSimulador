@@ -1,0 +1,307 @@
+
+<div class="container" ng-controller="simuladorController">
+    
+    <uib-tabset active="active">
+        
+        <uib-tab index="0" heading="Resultados Desejados">
+            <h3>Resultados Desejados</h3>
+            
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">MEDIDO</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">ADOTADO</span>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-4">
+                    QTD CPC com Negociação
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdQtdCpcNego" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adQtdCpcNego" class="form-control text-right">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    QTD CPC Total Necessário
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdQtdCpcTotalNece" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adQtdCpcTotalNece" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row" ng-controller="TimePickerController">
+                <div class="col-md-4">
+                    Tempo(hh:mm:ss)
+                </div>
+                <div class="col-md-4 form-group">
+                    <div uib-timepicker ng-model="data.mdTempo" hour-step="hstep" minute-step="mstep" show-seconds="showSeconds" second-step="sstep" show-meridian="showMeridian" ></div>
+                </div>
+                <div class="col-md-4 form-group">
+                    <div uib-timepicker ng-model="data.adTempo" hour-step="hstep" minute-step="mstep" show-seconds="showSeconds" second-step="sstep" show-meridian="showMeridian"></div>
+                </div>
+            </div>
+        </uib-tab>
+        
+        <uib-tab index="1" heading="Insumos">
+            <h3>Insumos</h3>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">MEDIDO</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">ADOTADO</span>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-4">
+                    QTD de Clientes
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdQtdClientes" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adQtdClientes" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    QTD de Telefones
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdQtdTelefones" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adQtdTelefones" class="form-control text-right">
+                </div>
+            </div>
+        </uib-tab>
+        
+        <uib-tab index="2" heading="Recursos Disponíveis">
+            <h3>Recursos Disponíveis</h3>
+            
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">MEDIDO</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">ADOTADO</span>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-4">
+                    Triagem CPC
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdTriagemCPC" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adTriagemCPC" class="form-control text-right">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    Agentes CPC
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdAgentesCPC" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adAgentesCPC" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row" ng-controller="TimePickerController">
+                <div class="col-md-4">
+                    Canais
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdCanais" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adCanais" class="form-control text-right">
+                </div>
+            </div>
+        </uib-tab>
+        
+        <uib-tab index="3" heading="Indicadores Chave">
+            <h3>Indicadores Chave</h3>
+
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">MEDIDO</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="header-span">ADOTADO</span>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-4">
+                    Fator de repetição por cliente
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdFatorReptCli" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adFatorReptCli" class="form-control text-right">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    Ciclo de discagem = tm(s)
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdCicloDiscagem" class="form-control text-right"/>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adCicloDiscagem" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    Qtd Média de cham. Por ciclo
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdQtdMediaChamCiclo" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adQtdMediaChamCiclo" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    TMA(s) – Triagem de CPC
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdTMATriagemCPC" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adTMATriagemCPC" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    TMA(s) – Agente CPC
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdTMAAgenteCPC" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adTMAAgenteCPC" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    %Entrega na PA/Chamada
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdEntregaPAChamada" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adEntregaPAChamada" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    %CPC/Entrega na PA
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdCPCEntregaPA" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adCPCEntregaPA" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    %Entrega  na PA/Cliente trab
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdEntregaPACliTrab" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adEntregaPACliTrab" class="form-control text-right">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    Índice de negoc. Por CPC
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.mdIndiceNegoCPC" class="form-control text-right">
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" ng-model="data.adIndiceNegoCPC" class="form-control text-right">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    Qtd de cham para uma na PA
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ mdEntregaPAChamadaFunction() | number: 2 }}
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ adEntregaPAChamadaFunction() | number: 2 }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    Qtd de cham para um CPC
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ mdQtdChamUmCpcFunction() | number: 2 }}
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ adQtdChamUmCpcFunction() | number: 2 }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    Qtd de clientes trab p/ um na PA
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ mdQtdCliTrabPAFunction() | number: 2 }}
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ adQtdCliTrabPAFunction() | number: 2 }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    Média Cham/ Ag. Triagem CPC
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ mdMediaChamTriagemCPCFunction() | number: 2 }}
+                </div>
+                <div class="col-md-4 form-group text-right">
+                    {{ adMediaChamTriagemCPCFunction() | number: 2 }}
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>
